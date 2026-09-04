@@ -61,8 +61,11 @@ public class pokemonMenu {
         sc.nextLine();
         if(op1 == 1){
             preguntarTipo();
-        }else{
+        }else if (op1 == 2){
             preguntarAtaque();
+        }else {
+            System.out.println("Respuesta inválida");
+            preguntas();
         }
         mostrarPokemones();
         System.out.println("\nPregunta 2");
@@ -72,8 +75,11 @@ public class pokemonMenu {
         sc.nextLine();
         if(op2 == 1){
             preguntarTipo();
-        }else{
+        }else if (op2 == 2){
             preguntarAtaque();
+        }else {
+            System.out.println("Respuesta inválida");
+            preguntas();
         }
         mostrarPokemones();
     }
@@ -257,7 +263,7 @@ public class pokemonMenu {
                         while ((linea = br.readLine()) != null) {
                             System.out.println(linea);
                         }
-                    } else if(resp == 0){
+                    } else if(resp == 2){
                         System.out.println("Cerrando programa");
                     }
 
@@ -296,7 +302,7 @@ public class pokemonMenu {
                         while ((linea = br.readLine()) != null) {
                             System.out.println(linea);
                         }
-                    } else if(resp == 0){
+                    } else if(resp == 2){
                         System.out.println("Cerrando programa");
                     }
 
