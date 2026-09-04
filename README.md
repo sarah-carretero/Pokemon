@@ -1,6 +1,6 @@
-# Pokémon Guessing Game
+# Pokemon Guessing Game
 
-A console-based Poeémon guessing game developed in Java as an Object-Oriented Programming project.
+A console-based Pokemon guessing game developed in Java as an Object-Oriented Programming project.
 
 The player must identify a randomly selected Pokemon by asking questions about its type and attacks. Based on the answers, the game eliminates Pokemon that do not match the available clues until the player makes a guess.
 
@@ -10,7 +10,7 @@ The game includes 15 Pokemon divided into three types:
 
 * Water
 * Fire
-* Earth
+* Plant
 
 Each Pokemon is assigned four randomly selected attacks from a predefined list.
 
@@ -19,8 +19,8 @@ At the beginning of each game, one Pokemon is randomly selected as the secret Po
 ## Features
 
 * Random selection of the secret Pokemon.
-* 15 playable Pokemon.
-* Three Pokemon types: Water, Fire, and Earth.
+* 15 Pokemon candidates.
+* Three Pokemon types: Water, Fire, and Plant.
 * Randomly generated attacks for each Pokemon.
 * Questions about Pokemon types.
 * Questions about Pokemon attacks.
@@ -37,15 +37,20 @@ This project was developed to practice core Object-Oriented Programming concepts
 
 ### Encapsulation
 
-The `pokemon` class stores its attributes as private fields and provides getter methods to access them.
+The `pokemon` class keeps its attributes private and provides getter methods to control access to the Pokémon's name and attacks.
 
 ### Inheritance
 
 The Pokémon types inherit from the abstract `pokemon` class:
+pokemon
+  - agua
+  - fuego
+  - planta
+This allows the three Pokemon types to share common attributes defined in the parent class
 
 ### Abstraction
 
-`pokemon` is an abstract class that defines common behavior while requiring subclasses to implement methods
+`pokemon` is an abstract class that defines common attributes and behavior while requiring subclasses to implement specific methods such as `decirTipo()` and `getTipo()`.
 
 ### Polymorphism
 
@@ -63,6 +68,19 @@ Different Pokémon types implement the same abstract methods with their own beha
 * `FileReader`
 * `FileWriter`
 * `PrintWriter`
+
+## Project Structure
+Pokemon
+  - ejecutarPokemon.java 
+  - pokemon.java
+  - pokemonMain.java
+  - pokemonMenu.java
+  -  README.md
+## Main Components
+pokemon.java — Defines the abstract Pokemon class and its three subclasses: agua, fuego, and planta.
+pokemonMenu.java — Contains the main game logic, questions, Pokemon filtering, guessing system, and score management.
+ejecutarPokemon.java — Controls the game flow.
+pokemonMain.java — Entry point of the application.
 
 ## How to Run
 
@@ -92,11 +110,13 @@ The game will start in the console.
 
 ## Score System
 
-The game allows players to save their results using text files.
+A player's score is stored in a `.txt` file using their name.
 
-A player's file stores their games played and games won.
+The file keeps track of:
+- Games played
+- Games won
 
-This allows the game to keep track of the player's total games and wins between sessions.
+This allows the game to preserve the player's statistics between sessions.
 
 ## Learning Objectives
 
@@ -112,7 +132,7 @@ Through this project, I practiced:
 * Reading and writing data to files.
 * Organizing a Java console application.
 
-### 👩‍💻 Author
+### Author
 
 **Sarah Carretero**
 
